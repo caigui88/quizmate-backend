@@ -1,0 +1,13 @@
+# 基础镜像
+FROM redis
+# author
+MAINTAINER quizmate
+
+# 挂载目录
+VOLUME /home/quizmate/redis
+# 创建目录
+RUN mkdir -p /home/quizmate/redis
+# 指定路径
+WORKDIR /home/quizmate/redis
+# 复制conf文件到路径
+COPY ./conf/redis.conf /home/quizmate/redis/redis.conf

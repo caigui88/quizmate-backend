@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.quizmate</groupId>
+        <artifactId>quizmate-backend</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>quizmate-common</artifactId>
+    <modules>
+        <module>quizmate-common-log</module>
+        <module>quizmate-common-core</module>
+        <module>quizmate-common-redis</module>
+        <module>quizmate-common-seata</module>
+        <module>quizmate-common-swagger</module>
+        <module>quizmate-common-security</module>
+        <module>quizmate-common-sensitive</module>
+        <module>quizmate-common-datascope</module>
+        <module>quizmate-common-datasource</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <description>
+        quizmate-common通用模块
+    </description>
+
+    <dependencies>
+        <!-- lombok -->
+        <!-- 简化 Java 代码的注解工具，如 @Getter、@Setter、@Builder -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+</project>

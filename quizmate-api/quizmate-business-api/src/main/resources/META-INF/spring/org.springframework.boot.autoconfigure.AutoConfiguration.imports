@@ -1,0 +1,3 @@
+com.quizmate.system.api.factory.RemoteUserFallbackFactory
+com.quizmate.system.api.factory.RemoteLogFallbackFactory
+com.quizmate.system.api.factory.RemoteFileFallbackFactory

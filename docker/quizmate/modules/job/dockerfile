@@ -1,0 +1,15 @@
+# 基础镜像
+FROM  openjdk:8-jre
+# author
+MAINTAINER quizmate
+
+# 挂载目录
+VOLUME /home/quizmate
+# 创建目录
+RUN mkdir -p /home/quizmate
+# 指定路径
+WORKDIR /home/quizmate
+# 复制jar文件到路径
+COPY ./jar/quizmate-modules-job.jar /home/quizmate/quizmate-modules-job.jar
+# 启动定时任务服务
+ENTRYPOINT ["java","-jar","quizmate-modules-job.jar"]

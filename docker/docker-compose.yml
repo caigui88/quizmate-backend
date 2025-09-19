@@ -1,0 +1,175 @@
+version: '3.8'
+name: quizmate
+
+x-healthcheck-curl: &hc_curl
+  test: [ "CMD-SHELL", "curl -fsS --max-time 5 http://localhost:$$PORT$$ || exit 1" ]
+  interval: 10s
+  timeout: 5s
+  retries: 12
+  start_period: 30s
+
+services:
+  quizmate-mysql:
+    container_name: quizmate-mysql
+    image: mysql:8.0
+    build:
+      context: ./mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/conf:/etc/mysql/conf.d
+      - ./mysql/logs:/logs
+      - ./mysql/data:/var/lib/mysql
+    command: [
+      'mysqld',
+      '--innodb-buffer-pool-size=80M',
+      '--character-set-server=utf8mb4',
+      '--collation-server=utf8mb4_unicode_ci',
+      '--default-time-zone=+8:00',
+      '--lower-case-table-names=1'
+    ]
+    environment:
+      MYSQL_DATABASE: 'qzm-cloud'
+      MYSQL_ROOT_PASSWORD: moru@0808
+    healthcheck:
+      test: [ "CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -p${MYSQL_ROOT_PASSWORD} --silent" ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+
+  quizmate-redis:
+    container_name: quizmate-redis
+    image: redis:7.2
+    build:
+      context: ./redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redis/conf/redis.conf:/home/quizmate/redis/redis.conf
+      - ./redis/data:/data
+    command: redis-server /home/quizmate/redis/redis.conf
+    healthcheck:
+      test: [ "CMD-SHELL", "redis-cli -a moru@0808 ping | grep PONG" ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+  quizmate-nacos:
+    container_name: quizmate-nacos
+    image: nacos/nacos-server:v2.2.0
+    build:
+      context: ./nacos
+    environment:
+      - MODE=standalone
+    volumes:
+      - ./nacos/logs/:/home/nacos/logs
+      - ./nacos/conf/application.properties:/home/nacos/conf/application.properties
+    ports:
+      - "8848:8848"
+      - "9848:9848"
+      - "9849:9849"
+    healthcheck:
+      test: [ "CMD-SHELL", "curl -fsS http://localhost:8848/nacos/index.html >/dev/null" ]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    depends_on:
+      - quizmate-mysql
+#  quizmate-nginx:
+#    container_name: quizmate-nginx
+#    image: nginx
+#    build:
+#      context: ./nginx
+#    ports:
+#      - "80:80"
+#    volumes:
+#      - ./nginx/html/dist:/home/quizmate/projects/quizmate-ui
+#      - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf
+#      - ./nginx/logs:/var/log/nginx
+#      - ./nginx/conf.d:/etc/nginx/conf.d
+#    depends_on:
+#      - quizmate-gateway
+#    links:
+#      - quizmate-gateway
+
+#  quizmate-gateway:
+#    container_name: quizmate-gateway
+#    build:
+#      context: ./quizmate/gateway
+#      dockerfile: dockerfile
+#    ports:
+#      - "8080:8080"
+#    depends_on:
+#      - quizmate-redis
+#    links:
+#      - quizmate-redis
+
+#  quizmate-auth:
+#    container_name: quizmate-auth
+#    build:
+#      context: ./quizmate/auth
+#      dockerfile: dockerfile
+#    ports:
+#      - "9200:9200"
+#    depends_on:
+#      - quizmate-redis
+#    links:
+#      - quizmate-redis
+
+#  quizmate-modules-system:
+#    container_name: quizmate-modules-system
+#    build:
+#      context: ./quizmate/modules/system
+#      dockerfile: dockerfile
+#    ports:
+#      - "9201:9201"
+#    depends_on:
+#      - quizmate-redis
+#      - quizmate-mysql
+#    links:
+#      - quizmate-redis
+#      - quizmate-mysql
+
+#  quizmate-modules-gen:
+#    container_name: quizmate-modules-gen
+#    build:
+#      context: ./quizmate/modules/gen
+#      dockerfile: dockerfile
+#    ports:
+#      - "9202:9202"
+#    depends_on:
+#      - quizmate-mysql
+#    links:
+#      - quizmate-mysql
+
+#  quizmate-modules-job:
+#    container_name: quizmate-modules-job
+#    build:
+#      context: ./quizmate/modules/job
+#      dockerfile: dockerfile
+#    ports:
+#      - "9203:9203"
+#    depends_on:
+#      - quizmate-mysql
+#    links:
+#      - quizmate-mysql
+
+#  quizmate-modules-file:
+#    container_name: quizmate-modules-file
+#    build:
+#      context: ./quizmate/modules/file
+#      dockerfile: dockerfile
+#    ports:
+#      - "9300:9300"
+#    volumes:
+#      - ./quizmate/uploadPath:/home/quizmate/uploadPath
+
+#  quizmate-visual-monitor:
+#    container_name: quizmate-visual-monitor
+#    build:
+#      context: ./quizmate/visual/monitor
+#      dockerfile: dockerfile
+#    ports:
+#      - "9100:9100"

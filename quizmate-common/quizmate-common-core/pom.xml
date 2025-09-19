@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.quizmate</groupId>
+        <artifactId>quizmate-common</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>quizmate-common-core</artifactId>
+    <version>1.0</version>
+
+    <description>
+        quizmate-common-core核心模块(万事万物的公共起源模块)
+    </description>
+
+    <dependencies>
+        <!-- SpringCloud Openfeign -->
+        <!-- 声明式 RESTFUL 客户端，用于微服务间远程调用-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!-- SpringCloud Loadbalancer -->
+        <!-- 客户端负载均衡，用于微服务调用时选择服务实例-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+
+        <!-- Spring Context Support -->
+        <!-- 提供 spring 上下文的增强支持，如定时任务、事件发布等-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+
+        <!-- Spring Web -->
+        <!-- 提供 spring mvc 的核心功能，如 RestController、RestTemplate -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+
+        <!-- Transmittable ThreadLocal -->
+        <!-- 解决线程池中 ThreadLocal 传递问题-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>transmittable-thread-local</artifactId>
+        </dependency>
+
+        <!-- Pagehelper -->
+        <!-- Mybatis 分页插件 简化分页查询操作-->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- Hibernate Validator -->
+        <!-- 提供注解式数据校验功能，如 @NotNull、@Size -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- Jackson -->
+        <!-- Java 对象与 JSON 互转核心库 -->
+        <!--<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>-->
+
+        <!-- Alibaba Fastjson -->
+        <!-- 阿里巴巴提供的高性能 JSON 处理库 -->
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+        </dependency>
+
+        <!-- Jwt -->
+        <!-- Java JWT 库，用于生成和解析 JSON Web Token -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+        </dependency>
+
+        <!-- Jaxb -->
+        <!-- Java XML 绑定，用于 XML 与对象互转（Java 9+ 需要单独依赖）-->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+        </dependency>
+
+        <!-- Apache Lang3 -->
+        <!-- Java 常用工具类库，如 StringUtils、ObjectUtils 等 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <!-- Commons Io -->
+        <!-- 文件和流操作工具类库 -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+
+        <!-- excel工具 -->
+        <!-- 处理 Excel 文件（.xlsx）-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+        </dependency>
+
+        <!-- Java Servlet -->
+        <!-- Servlet 核心类库，提供 HttpServlet、Filter 等接口 -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

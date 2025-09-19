@@ -1,0 +1,2 @@
+com.quizmate.common.redis.configure.RedisConfig
+com.quizmate.common.redis.service.RedisService
