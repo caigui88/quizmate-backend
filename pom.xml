@@ -11,8 +11,8 @@
     <description>面试伙伴微服务系统</description>
 
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <quizmate.version>1.0</quizmate.version>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -32,7 +32,7 @@
         <jjwt.version>0.9.1</jjwt.version>
         <minio.version>8.2.2</minio.version>
         <poi.version>4.1.2</poi.version>
-        <springdoc.version>1.6.9</springdoc.version>
+        <springdoc.version>1.7.0</springdoc.version>
         <transmittable-thread-local.version>2.14.4</transmittable-thread-local.version>
         <!-- override dependency version -->
         <tomcat.version>9.0.108</tomcat.version>
@@ -44,6 +44,7 @@
         <hutool.version>5.8.8</hutool.version>
         <spring-boot-starter-data-elasticsearch.version>2.7.2</spring-boot-starter-data-elasticsearch.version>
         <wx-java-mp-spring-boot-starter.version>4.4.0</wx-java-mp-spring-boot-starter.version>
+        <sa-token.version>1.39.0</sa-token.version>
     </properties>
 
     <modules>
@@ -307,6 +308,34 @@
                 <artifactId>wx-java-mp-spring-boot-starter</artifactId>
                 <version>${wx-java-mp-spring-boot-starter.version}</version>
             </dependency>
+
+            <!-- Sa-Token 权限认证，在线文档：https://sa-token.cc -->
+<!--            <dependency>-->
+<!--                <groupId>cn.dev33</groupId>-->
+<!--                <artifactId>sa-token-spring-boot-starter</artifactId>-->
+<!--                <version>${sa-token.version}</version>-->
+<!--            </dependency>-->
+            <!-- Sa-Token 整合 Redis （使用 jackson 序列化方式） -->
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-redis-jackson</artifactId>
+                <version>${sa-token.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-spring-boot-starter</artifactId>
+                <version>${sa-token.version}</version>
+            </dependency>
+            <!-- 解决Sa-Token与Gateway的响应式适配问题 -->
+            <!-- Sa-Token 权限认证（Reactor响应式集成），在线文档：https://sa-token.cc -->
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-reactor-spring-boot-starter</artifactId>
+                <version>1.39.0</version>
+            </dependency>
+
+
 
         </dependencies>
     </dependencyManagement>

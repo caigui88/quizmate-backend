@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/docker/mysql/db/readme.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/docker/quizmate/auth/jar/readme.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/docker/quizmate/gateway/jar/readme.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/docker/quizmate/modules/file/jar/readme.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/docker/quizmate/modules/gen/jar/readme.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/docker/quizmate/modules/job/jar/readme.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/docker/quizmate/modules/system/jar/readme.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/docker/quizmate/visual/monitor/jar/readme.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/quizmate-api/quizmate-business-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-api/quizmate-business-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-datascope/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-datascope/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-datasource/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-log/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-redis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-seata/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-seata/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-security/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-sensitive/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-sensitive/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-swagger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/quizmate-common-swagger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/file-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/file-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/interaction-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/interaction-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/mockInterview-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/mockInterview-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/question-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/question-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/questionBank-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/questionBank-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/search-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/search-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/user-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-modules/user-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-visual/quizmate-monitor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-visual/quizmate-monitor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-visual/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/quizmate-visual/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

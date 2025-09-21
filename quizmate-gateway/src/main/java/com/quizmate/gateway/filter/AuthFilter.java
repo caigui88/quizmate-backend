@@ -5,7 +5,7 @@ import com.quizmate.common.core.exception.auth.AuthException;
 import com.quizmate.common.core.utils.StringUtils;
 import com.quizmate.common.core.utils.ThrowUtils;
 import com.quizmate.common.redis.service.RedisService;
-import com.quizmate.gateway.config.properties.IgnoreWhiteProperties;
+import com.quizmate.gateway.config.sentinel.IgnoreWhiteProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

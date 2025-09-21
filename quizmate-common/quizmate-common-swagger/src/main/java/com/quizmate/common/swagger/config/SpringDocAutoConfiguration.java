@@ -1,5 +1,6 @@
 package com.quizmate.common.swagger.config;
 
+import com.quizmate.common.swagger.config.properties.SpringDocProperties;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;

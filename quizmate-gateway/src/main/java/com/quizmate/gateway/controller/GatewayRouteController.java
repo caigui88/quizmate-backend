@@ -1,7 +1,7 @@
 package com.quizmate.gateway.controller;
 
 import com.quizmate.common.core.domain.vo.AjaxResponse;
-import com.quizmate.gateway.service.GatewayRouterService;
+import com.quizmate.gateway.service.GatewayRouteService;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,9 +18,9 @@ import reactor.core.publisher.Mono;
 @RequestMapping("/gateway/routes")
 public class GatewayRouteController {
 
-    private final GatewayRouterService routerService;
+    private final GatewayRouteService routerService;
 
-    public GatewayRouteController(GatewayRouterService routerService) {
+    public GatewayRouteController(GatewayRouteService routerService) {
         this.routerService = routerService;
     }
 

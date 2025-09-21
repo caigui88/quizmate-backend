@@ -9,5 +9,5 @@ package com.quizmate.gateway.handler;
  */
 public class ValidateCodeHandler {
 
-    private
+
 }

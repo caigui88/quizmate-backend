@@ -3,7 +3,7 @@ package com.quizmate.common.core.utils;
 import com.quizmate.common.core.domain.vo.WebFluxResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.server.ServerHttpResponse;
+import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -22,16 +22,16 @@ import java.nio.charset.StandardCharsets;
  */
 @Slf4j
 public class ServletUtils {
-
-    public static String getParameter(String key) {
-        return
-    }
-
-    public static HttpServletRequest getRequest() {
-        try {
-            return
-        }
-    }
+//
+//    public static String getParameter(String key) {
+//        return
+//    }
+//
+//    public static HttpServletRequest getRequest() {
+//        try {
+//            return
+//        }
+//    }
 
     public static ServletRequestAttributes getRequestAttribute() {
         try {
@@ -86,15 +86,19 @@ public class ServletUtils {
         }
     }
 
-    /**
-     *
-     * @param response
-     * @param webFluxResponse
-     * @return
-     */
-    public static Mono<Void> webFluxResponseWriter(ServerHttpResponse response, WebFluxResponse webFluxResponse) {
-        response.setStatusCode(webFluxResponse.getStatusCode());
-        response.getHeaders().add(HttpHeaders.CONTENT_TYPE,webFluxResponse.getContentType());
-
+    public static Mono<Void> webFluxResponseWriter(ServerHttpResponse response, String message) {
+        return null;
     }
+
+//    /**
+//     *
+//     * @param response
+//     * @param webFluxResponse
+//     * @return
+//     */
+//    public static Mono<Void> webFluxResponseWriter(ServerHttpResponse response, WebFluxResponse webFluxResponse) {
+//        response.setStatusCode(webFluxResponse.getStatusCode());
+//        response.getHeaders().add(HttpHeaders.CONTENT_TYPE,webFluxResponse.getContentType());
+//
+//    }
 }

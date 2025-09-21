@@ -1,7 +1,8 @@
 package com.quizmate.gateway.filter;
 
+import com.quizmate.common.core.utils.html.EscapeUtil;
 import com.quizmate.common.core.utils.StringUtils;
-import com.quizmate.gateway.config.properties.XssProperties;
+import com.quizmate.gateway.config.security.properties.XssProperties;
 import io.netty.buffer.ByteBufAllocator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

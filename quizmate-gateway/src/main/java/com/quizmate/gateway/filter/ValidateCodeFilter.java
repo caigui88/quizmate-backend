@@ -2,7 +2,9 @@ package com.quizmate.gateway.filter;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
+import com.quizmate.common.core.utils.ServletUtils;
 import com.quizmate.common.core.utils.StringUtils;
+import com.quizmate.gateway.service.ValidateCodeService;
 import com.quizmate.gateway.config.properties.CaptchaProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
@@ -12,6 +14,7 @@ import org.springframework.core.io.buffer.DataBufferUtils;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
+
 
 import java.nio.CharBuffer;
 import java.nio.charset.StandardCharsets;

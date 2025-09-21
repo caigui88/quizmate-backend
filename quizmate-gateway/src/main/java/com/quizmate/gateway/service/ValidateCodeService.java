@@ -8,5 +8,6 @@ package com.quizmate.gateway.service;
  * @since 2025-09-17 13:04
  */
 public interface ValidateCodeService {
-    public
+
+    void checkCaptcha(String string, String string1);
 }

@@ -12,6 +12,19 @@
 
     <artifactId>quizmate-modules</artifactId>
     <version>1.0</version>
+    <packaging>pom</packaging>
+    <description>
+        quizmate-modules业务模块
+    </description>
 
-    
+    <modules>
+        <module>user-service</module>
+        <module>questionBank-service</module>
+        <module>interaction-service</module>
+        <module>mockInterview-service</module>
+        <module>search-service</module>
+        <module>file-service</module>
+        <module>question-service</module>
+    </modules>
+
 </project>
